@@ -38,3 +38,23 @@ for (let i = 0; i < numSmallDots; i++)
     dot.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
     container.appendChild(dot);
 }
+
+const hand = document.querySelector(".hand");
+let rotation = 90;
+const angleRotation = 360 / numBigItems;
+
+const btn = document.getElementById("myButton");
+
+// Set initial onclick
+btn.onclick = function()
+{
+    const angleStart = rotation;
+    rotation += angleRotation;
+    const angleEnd = rotation;
+
+    document.documentElement.style.setProperty("--transformStart", `translate(-50%, -100%) rotate(${angleStart}deg)`);
+    document.documentElement.style.setProperty("--transformEnd", `translate(-50%, -100%) rotate(${angleEnd}deg)`);
+
+    hand.style.animation = "none";
+    hand.style.animation = "rotateHand 1s ease forwards";
+};

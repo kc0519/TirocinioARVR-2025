@@ -45,15 +45,15 @@ body {
     top: 50%;
     left: 50%;
     transform-origin: bottom center;
-    animation: rotateHand 5s linear infinite;
+    transform: translate(-50%, -100%) rotate(90deg);
     z-index: 2;
 }
     
 @keyframes rotateHand {
-    from {
-        transform: translate(-50%, -100%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -100%) rotate(360deg);
-    }
+  from {
+    transform: var(--transformStart);
+  }
+  to {
+    transform: var(--transformEnd);
+  }
 }
