@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Disposizione Circolare</title>
+        <link rel="stylesheet" href="playerWheelStyle.css">
+        <script src="dots.js" defer></script>
+    </head>
+
+    <body>
+        <div class="circle-container" id="circle">
+            <div class="hand"></div>
+        </div>
+
+        <style>
+            
+        </style>
+
+
+        <script>
+            const rotatingDiv = document.querySelector('.rotating');
+            let angle = 0;
+
+            function rotate() {
+                angle += 0.5; // Degrees per frame
+                rotatingDiv.style.transform = `translate(-50%, -100%) rotate(${angle}deg)`;
+                requestAnimationFrame(rotate);
+            }
+
+            rotate(); // Start animation
+        </script>
+    </body>
+</html>
