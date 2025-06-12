@@ -10,9 +10,44 @@
 
 body
 {
+    position: relative;
     background-color: variables.$chrome-incognito-color;
     box-shadow: 0px 0px 0.5em 0px rgba(0, 0, 0, 0.5);
     color: variables.$not-quite-black;
     font-family: variables.$font-family;
     margin-bottom: var(--hidden-footer-height);
+}
+
+
+
+
+
+
+/* Tablet and up */
+@media screen and (max-width: variables.$max-mobile-size) {
+  body {
+    width: 100vw;
+  }
+}
+
+/* Desktop and up */
+@media screen and (min-width: variables.$min-tablet-size) and (max-width: variables.$max-tablet-size) {
+  body {
+    width: 100vw;
+  }
+}
+
+/* Large desktop */
+@media screen and (min-width: variables.$min-desktop-size) {
+  body {
+    width: 100vw;
+  }
+}
+
+
+@media screen and (min-width: variables.$max-desktop-size) {
+  body {
+    width: variables.$max-desktop-size;
+    margin: 0 auto;
+  }
 }
