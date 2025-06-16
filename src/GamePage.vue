@@ -2,7 +2,6 @@
     import { ref } from "vue";
     import MiniMappa from "@/components/game/MiniMappa.vue";
     import CardInventory from "@/components/game/CardInventory.vue";
-    // import InfButton from "@/components/game/InfButton.vue";
     import ActionWheel from "@/components/game/ActionWheel.vue";
     import GameMenuButtons from "@/components/game/GameMenuButtons.vue";
     import GameButtons from "@/components/game/GameButtons.vue";
