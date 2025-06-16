@@ -22,6 +22,7 @@
         inventoryItems?: unknown[] // This will affect abilities based on your game logic
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const props = withDefaults(defineProps<Props>(), {
         abilities: () => [
             { image: "./img/ability1.png" },
