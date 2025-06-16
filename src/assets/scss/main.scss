@@ -16,6 +16,7 @@ body
     color: variables.$not-quite-black;
     font-family: variables.$font-family;
     margin-bottom: var(--hidden-footer-height);
+    overflow: hidden;
 }
 
 

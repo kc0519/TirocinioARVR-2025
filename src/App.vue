@@ -1,21 +1,56 @@
-<script lang="ts" setup>
-    // import AlertHandler from "./components/handlers/AlertHandler.vue";
-    // import DefaultLayout from "./layouts/DefaultLayout.vue";
+<!-- <script lang="ts" setup>
+    import { ref } from "vue";
     import PlayerWheel from "./components/codiciHtml/playerWheel/playerWheel.vue";
-    import PlayerCard from "./components/codiciHtml/playerCard/playerCard.vue";
-</script>
+    import PCard from "./components/codiciHtml/playerCard/pCard.vue";
+    import InventoryOverlay from "./components/codiciHtml/cards/inventoryOverlay.vue";
 
-<template>
-    <!-- <DefaultLayout>
-        <RouterView v-slot="context">
-            <Transition name="page" mode="out-in">
-                <Component :is="context.Component" :key="context.route.path" />
-            </Transition>
-        </RouterView>
-    </DefaultLayout>
-    <AlertHandler /> -->
+    // Dummy data for required props
+    import type { Character, Weapons, PlayerStats, Ability } from "@/types"; // adjust path as needed
+
+    const character: Character = {
+        name: "Test Character",
+        image: "./img/characterIcon.png",
+        specialWeapon: "./img/weapon3.png"
+    };
+    const weapons: Weapons = {
+        primary: "./img/weapon1.png",
+        secondary: "./img/weapon2.png"
+    };
+    const playerStats: PlayerStats = {
+        currentHealth: 80,
+        maxHealth: 100,
+        currentExperience: 70,
+        experienceToNextLevel: 100
+    };
+    const abilities: Ability[] = [
+        { image: "./img/ability1.png", name: "Ability 1", description: "First ability" },
+        { image: "./img/ability2.png", name: "Ability 2", description: "Second ability" },
+        { image: "./img/ability3.png", name: "Ability 3", description: "Third ability" }
+    ];
+    const inventoryItems: unknown[] = [];
+
+    // Reactive state for inventory overlay
+    const isInventoryOpen = ref(false);
+
+    function showInventory()
+    {
+        // Toggle the inventory visibility
+        isInventoryOpen.value = !isInventoryOpen.value;
+    }
+</script> -->
+
+<!-- eslint-disable vue/v-on-event-hyphenation -->
+<!-- <template>
     <PlayerWheel />
-    <PlayerCard />
+    <PCard :character="character"
+           :weapons="weapons"
+           :player-stats="playerStats"
+           :abilities="abilities"
+           :inventory-items="inventoryItems"
+           @inventoryClick="showInventory" /> -->
+
+    <!-- Inventory Display - persistent UI element -->
+    <!-- <InventoryOverlay v-if="isInventoryOpen" />
 </template>
 
 <style>
@@ -29,23 +64,4 @@
 
 <style lang="scss">
     @use "@/assets/scss/index" as *;
-
-    // #app
-    // {
-    //     .page-enter-from,
-    //     .page-leave-to
-    //     {
-    //         opacity: 0;
-    //     }
-    //     .page-enter-active,
-    //     .page-leave-active
-    //     {
-    //         transition: opacity $app-transition-duration $app-transition-timing-function;
-    //     }
-    //     .page-enter-to,
-    //     .page-leave-from
-    //     {
-    //         opacity: 1;
-    //     }
-    // }
-</style>
+</style> -->

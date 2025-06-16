@@ -13,25 +13,27 @@
 
 <style lang="scss" scoped>
 .playerWheel {
-    --circle-width: 115px;
-    border-radius: 50%;
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    background-color: aliceblue;
-    width: calc((var(--circle-width) * 0.13) + var(--circle-width));
-    aspect-ratio: 1 / 1;
-    padding-top: calc(var(--circle-width) * 0.13 / 2);
-    padding-left: calc(var(--circle-width) * 0.13 / 2);
+  --circle-width: 115px;
+  --wheel-proportion: 0.16;
+  border-radius: 50%;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: calc((var(--circle-width) * var(--wheel-proportion)) + var(--circle-width));
+  aspect-ratio: 1 / 1;
+  padding-top: calc(var(--circle-width) * var(--wheel-proportion) / 2);
+  padding-left: calc(var(--circle-width) * var(--wheel-proportion) / 2);
+  background-image: url("./img/wheelBackground.png");
+  background-position: center;
+  background-size: calc((var(--circle-width) * var(--wheel-proportion)) + var(--circle-width));
 }
 
 .background {
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
 </style>

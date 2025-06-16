@@ -36,9 +36,8 @@
     left: 50%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    width: 7%;
+    width: 15%;
     aspect-ratio: 1/1;
-    background-color: #ff4081;
 }
 
 @for $i from 3 through 5 {
@@ -49,6 +48,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       // Posizionamento dinamico tramite nth-child
+      background-image: url('./img/actionOn.png');
+      background-size: contain;
       @for $j from 1 through $i {
         &:nth-child(#{$j}) { // +1: .hand, +1: .circle-item, +$i: offset per i big items
           $angle: (180deg - ($i - 1) * 15deg) + ($j - 1) * 30deg;
