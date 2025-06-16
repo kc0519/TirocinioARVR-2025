@@ -10,7 +10,7 @@
 .board-map {
     position: absolute;
     width: 18%;
-    height: 18%;
+    height: 19%;
     display: block;
 }
 .map-content {
