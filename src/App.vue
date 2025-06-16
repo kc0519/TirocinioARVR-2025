@@ -1,6 +1,5 @@
 <!-- eslint-disable no-multiple-empty-lines -->
 <script lang="ts" setup>
-<script lang="ts" setup>
     import { ref } from "vue";
     import PlayerWheel from "./components/codiciHtml/playerWheel/playerWheel.vue";
     import PCard from "./components/codiciHtml/playerCard/pCard.vue";
@@ -83,7 +82,6 @@
         showZombieOverlay.value = false;
     }
 </script>
-</script>
 
 <!-- eslint-disable vue/v-on-event-hyphenation -->
 
@@ -120,9 +118,7 @@
                   class="zombieWindow"
                   @close="closeZombieOverlay" />
 </template>
-</template>
 
-<style>
 <style>
     body{
         height: 100vh;
