@@ -1,4 +1,4 @@
-<!-- <script lang="ts" setup>
+<script lang="ts" setup>
     import { ref } from "vue";
     import PlayerWheel from "./components/codiciHtml/playerWheel/playerWheel.vue";
     import PCard from "./components/codiciHtml/playerCard/pCard.vue";
@@ -37,20 +37,20 @@
         // Toggle the inventory visibility
         isInventoryOpen.value = !isInventoryOpen.value;
     }
-</script> -->
+</script>
 
 <!-- eslint-disable vue/v-on-event-hyphenation -->
-<!-- <template>
+<template>
     <PlayerWheel />
     <PCard :character="character"
            :weapons="weapons"
            :player-stats="playerStats"
            :abilities="abilities"
            :inventory-items="inventoryItems"
-           @inventoryClick="showInventory" /> -->
+           @inventoryClick="showInventory" />
 
     <!-- Inventory Display - persistent UI element -->
-    <!-- <InventoryOverlay v-if="isInventoryOpen" />
+    <InventoryOverlay v-if="isInventoryOpen" />
 </template>
 
 <style>
@@ -64,4 +64,4 @@
 
 <style lang="scss">
     @use "@/assets/scss/index" as *;
-</style> -->
+</style>

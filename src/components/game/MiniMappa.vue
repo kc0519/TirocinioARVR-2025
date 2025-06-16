@@ -8,9 +8,9 @@
 
 <style lang="scss" scoped>
 .board-map {
-    position: relative;
-    width: 32vh;
-    height: 32vh;
+    position: absolute;
+    width: 18%;
+    height: 18%;
     display: block;
 }
 .map-content {
