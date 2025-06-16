@@ -1,5 +1,6 @@
 <!-- eslint-disable no-multiple-empty-lines -->
 <script lang="ts" setup>
+<script lang="ts" setup>
     import { ref } from "vue";
     import PlayerWheel from "./components/codiciHtml/playerWheel/playerWheel.vue";
     import PCard from "./components/codiciHtml/playerCard/pCard.vue";
@@ -11,7 +12,7 @@
     import ZombieWindow from "@/components/game/ZombieWindow.vue";
 
     // Dummy data for required props
-    import type { Character, Weapons, PlayerStats, Ability } from "@/types"; // adjust path as needed
+    import type { Character, Weapons, PlayerStats, Ability } from "./types.ts";
 
     const character: Character = {
         name: "Test Character",
@@ -82,6 +83,7 @@
         showZombieOverlay.value = false;
     }
 </script>
+</script>
 
 <!-- eslint-disable vue/v-on-event-hyphenation -->
 
@@ -118,7 +120,9 @@
                   class="zombieWindow"
                   @close="closeZombieOverlay" />
 </template>
+</template>
 
+<style>
 <style>
     body{
         height: 100vh;
