@@ -1,5 +1,5 @@
 <!-- eslint-disable no-multiple-empty-lines -->
-<!-- <script lang="ts" setup>
+<script lang="ts" setup>
     import { ref } from "vue";
     import PlayerWheel from "./components/codiciHtml/playerWheel/playerWheel.vue";
     import PCard from "./components/codiciHtml/playerCard/pCard.vue";
@@ -81,10 +81,10 @@
     {
         showZombieOverlay.value = false;
     }
-</script> -->
+</script>
 
 <!-- eslint-disable vue/v-on-event-hyphenation -->
-<!--
+
 <template>
     <PlayerWheel />
     <PCard :character="character"
@@ -117,9 +117,9 @@
     <ZombieWindow v-if="showZombieOverlay"
                   class="zombieWindow"
                   @close="closeZombieOverlay" />
-</template> -->
+</template>
 
-<!-- <style>
+<style>
     body{
         height: 100vh;
         width: 100vw;
@@ -165,16 +165,16 @@
         transform: translate(-50%, -50%);
     }
     .buttonMenu{
-        position: fixed;
-        top: 10%;
-        right: 5%;
+        position: absolute;
+        top: 3%;
+        right: 2%;
         background-size: cover;
         background-position: center;
     }
     .buttonZombie{
-        position: fixed;
-        top: 10%;
-        right: 12%;
+        position: absolute;
+        top: 3%;
+        right: 8%;
         background-size: cover;
         background-position: center;
     }
@@ -204,7 +204,7 @@
     }
     .zombie-icon {
         aspect-ratio: 1;
-        height: 5%;
+        height: 90%;
         width: auto;
         object-fit: contain;
         pointer-events: none;

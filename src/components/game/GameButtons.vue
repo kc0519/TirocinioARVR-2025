@@ -5,8 +5,9 @@
 </template>
 <style lang="scss" scoped>
     .button{
-        width: 6vh;
-        height: 6vh;
+        width: 4%;
+        aspect-ratio: 1;
+        height: auto;
         border-radius: 4px;
         cursor: pointer;
         background-image: url('./BackgroundButton.png');

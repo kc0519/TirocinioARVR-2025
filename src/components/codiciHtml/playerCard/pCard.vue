@@ -165,7 +165,7 @@
             ability2: "Ability 2",
             ability3: "Ability 3"
         };
-        return /* hoverTexts[elementName] || */ elementName;
+        return hoverTexts[elementName] || elementName;
     };
 </script>
 
