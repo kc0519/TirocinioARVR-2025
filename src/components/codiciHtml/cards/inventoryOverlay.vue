@@ -19,6 +19,7 @@
         z-index: 1000;
         pointer-events: auto;
         aspect-ratio: 23 / 10;
+        z-index: 1;
     }
 
     .c {
