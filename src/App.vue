@@ -44,13 +44,6 @@
         isInventoryOpen.value = !isInventoryOpen.value;
     }
 
-
-
-
-
-
-
-
     const actionWheelRef = ref();
     const gameMenuButtons = ref(false);
     const showZombieOverlay = ref(false);
@@ -94,7 +87,10 @@
            :inventory-items="inventoryItems"
            @inventoryClick="showInventory" />
 
-    <InventoryOverlay v-if="isInventoryOpen" />
+    <!-- Wrap InventoryOverlay with Transition component -->
+    <Transition name="inventory">
+        <InventoryOverlay v-if="isInventoryOpen" />
+    </Transition>
 
     <div class="background"
          :class="{ 'overlay-active': gameMenuButtons || showZombieOverlay }"
@@ -135,11 +131,13 @@
         height: 100%;
         z-index: 0;
     }
+
     .map {
         position: fixed;
         bottom: 1%;
         left: 1%;
     }
+
     .card {
         position: absolute;
         bottom: 7%;
@@ -147,11 +145,13 @@
         width: 0;
         height: 0;
     }
+
     .buttonInfo {
         position: absolute;
         bottom: 35%;
         right: 30%;
     }
+
     .gameMenuButtons {
         pointer-events: auto;
         position: fixed;
@@ -164,6 +164,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .buttonMenu{
         position: absolute;
         top: 3%;
@@ -171,6 +172,7 @@
         background-size: cover;
         background-position: center;
     }
+
     .buttonZombie{
         position: absolute;
         top: 3%;
@@ -178,11 +180,13 @@
         background-size: cover;
         background-position: center;
     }
+
     .overlay-active {
         pointer-events: auto;
         background: rgba(0, 0, 0, 0.2);
         z-index: 2000;
     }
+
     .zombieWindow {
         pointer-events: auto;
         position: fixed;
@@ -195,6 +199,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .material-symbols-outlined {
         font-variation-settings:
             'FILL' 0,
@@ -202,12 +207,35 @@
             'GRAD' 0,
             'opsz' 100;
     }
+
     .zombie-icon {
         aspect-ratio: 1;
         height: 90%;
         width: auto;
         object-fit: contain;
         pointer-events: none;
+    }
+
+    /* Inventory animation */
+    .inventory-enter-active,
+    .inventory-leave-active {
+        transition: transform 0.4s ease-out, opacity 0.3s ease-out;
+    }
+
+    .inventory-enter-from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .inventory-leave-to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .inventory-enter-to,
+    .inventory-leave-from {
+        transform: translateY(0);
+        opacity: 1;
     }
 </style>
 

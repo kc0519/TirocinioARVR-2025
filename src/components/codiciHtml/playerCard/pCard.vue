@@ -165,7 +165,7 @@
             ability2: "Ability 2",
             ability3: "Ability 3"
         };
-        return hoverTexts[elementName] || elementName;
+        return /* hoverTexts[elementName] || */ elementName;
     };
 </script>
 
@@ -183,6 +183,7 @@
     right: 0;
     position: absolute;
     background-position: center;
+    z-index: 1;
 }
 
 .hover-tooltip {
