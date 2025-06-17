@@ -105,7 +105,7 @@
         <span class="material-symbols-outlined">menu</span>
     </GameButtons>
     <GameButtons class="buttonZombie" @click="openZombieOverlay">
-        <img src="./img/ZombieIcon.png"
+        <img src="../../../public/icons/ZombieIcon.png"
              alt="Zombie"
              class="zombie-icon" />
     </GameButtons>
