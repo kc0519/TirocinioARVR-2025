@@ -16,6 +16,7 @@
         width: 44%;
         aspect-ratio: 21 / 7;
         height: auto;
+        z-index: 1;
     }
 
     .c {

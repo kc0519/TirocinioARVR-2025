@@ -1,5 +1,5 @@
 <!-- eslint-disable no-multiple-empty-lines -->
-<script lang="ts" setup>
+<script setup lang="ts">
     import { ref } from "vue";
     import PlayerWheel from "./components/codiciHtml/playerWheel/playerWheel.vue";
     import PCard from "./components/codiciHtml/playerCard/pCard.vue";
@@ -62,9 +62,12 @@
         {
             return;
         }
+        // Usa direttamente le coordinate della viewport
+        const x = e.clientX;
+        const y = e.clientY;
         if (actionWheelRef.value && actionWheelRef.value.showWheel)
         {
-            actionWheelRef.value.showWheel(e.clientX, e.clientY);
+            actionWheelRef.value.showWheel(x, y);
         }
     }
 
@@ -98,7 +101,6 @@
 
     <div class="background"
          :class="{ 'overlay-active': gameMenuButtons || showZombieOverlay }"
-         :style="gameMenuButtons || showZombieOverlay ? 'overlay-active' : ''"
          @click="onBackgroundClick">
     </div>
     <MiniMappa class="map" />
@@ -119,13 +121,7 @@
                   @close="closeZombieOverlay" />
 </template>
 
-<style>
-    body{
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        box-shadow: 0;
-    }
+<style lang="scss" scoped>
 
     .background {
         position: fixed;
@@ -159,7 +155,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: 3000;
+        z-index: 6000;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);

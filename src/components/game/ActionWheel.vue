@@ -213,7 +213,6 @@
              left: wheelPosition.x + 'px',
              top: wheelPosition.y + 'px',
              display: isVisible ? 'block' : 'none',
-             transform: 'translate(-50%, -50%)'
          }">
         <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
             <g id="slices">
@@ -268,14 +267,12 @@
 <style lang ="scss" scoped>
    /* Ruota delle azioni */
 .wheel {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      position: fixed;
+      transform: translate(-50%, -50%);
       width: 300px;
       height: 300px;
-      transform: translate(-50%, -50%);
       display: none;
-      pointer-events: none;
+      pointer-events: auto; // Permetti interazione
       filter: drop-shadow(0 0 1vw rgba(0,0,0,0.5));
     }
     .wheel svg {
@@ -329,8 +326,8 @@
       padding: 15px;
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      z-index: 100;
       min-width: 200px;
+      z-index: 100;
     }
     .controls h3 {
       margin: 0 0 15px 0;
