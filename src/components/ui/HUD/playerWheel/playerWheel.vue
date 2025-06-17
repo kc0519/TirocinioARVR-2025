@@ -27,6 +27,7 @@
   background-image: url("./img/wheelBackground.png");
   background-position: center;
   background-size: calc((var(--circle-width) * var(--wheel-proportion)) + var(--circle-width));
+  z-index: 1;
 }
 
 .background {

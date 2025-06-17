@@ -166,7 +166,11 @@
             ability2: "Ability 2",
             ability3: "Ability 3"
         };
+<<<<<<< HEAD:src/components/codiciHtml/playerCard/pCard.vue
         return /* hoverTexts[elementName] ||*/ elementName;
+=======
+        return /* hoverTexts[elementName] || */ elementName;
+>>>>>>> 45a269ff148efd6d5edba4d82bf0ec2da5822699:src/components/ui/HUD/playerCard/pCard.vue
     };
 </script>
 

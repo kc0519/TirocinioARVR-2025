@@ -10,7 +10,7 @@
         height: auto;
         border-radius: 4px;
         cursor: pointer;
-        background-image: url('./BackgroundButton.png');
+        background-image: url('./img/BackgroundButton.png');
         background-size: cover;
         background-position: center;
         display: flex;

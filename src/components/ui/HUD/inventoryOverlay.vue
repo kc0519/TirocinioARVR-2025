@@ -10,17 +10,20 @@
 
 <style lang="scss" scoped>
     .cards-container {
-        position: absolute;
-        bottom: 0;
-        left: 20%;
-        width: 44%;
-        aspect-ratio: 21 / 7;
-        height: auto;
+        --card-width: 23%;
+        position: fixed;
+        bottom: -8.5%;
+        left: 44%;
+        transform: translateX(-50%);
+        width: 38%;
+        z-index: 1000;
+        pointer-events: auto;
+        aspect-ratio: 23 / 10;
         z-index: 1;
     }
 
     .c {
-        width: 25%;
+        width: var(--card-width);
         aspect-ratio: 565 / 800;
         height: auto;
         background-color: blueviolet;
@@ -49,10 +52,10 @@
     }
 
     .c1{
-        top: 0%;
-        left: 37.5%;
+        top: 0;
+        left: calc(50% - var(--card-width) / 2);
         box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c1:hover {
@@ -60,11 +63,11 @@
     }
 
     .c2{
-        top: 6%;
-        left: 56%;
+        top: calc(0.2778 * var(--card-width) - 0.945%);
+        right: calc(-1.2 * var(--card-width) + 49%);
         transform: rotate(10deg);
         box-shadow: 0.5% 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c2:hover {
@@ -72,11 +75,11 @@
     }
 
     .c3{
-        top: 21%;
-        left: 74%;
+        top: calc(0.8182 * var(--card-width) + 0.5455%);
+        right: calc(-1.909 * var(--card-width) + 48.725%);
         transform: rotate(20deg);
         box-shadow: 0.5% 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c3:hover {
@@ -84,11 +87,11 @@
     }
 
     .c4{
-        top: 6%;
-        left: 19%;
+        top: calc(0.2778 * var(--card-width) - 0.945%);
+        left: calc(-1.2 * var(--card-width) + 49%);
         transform: rotate(-10deg);
         box-shadow: -0.5% 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c4:hover {
@@ -96,11 +99,11 @@
     }
 
     .c5{
-        top: 21%;
-        left: 1%;
+        top: calc(0.8182 * var(--card-width) + 0.5455%);
+        left: calc(-1.909 * var(--card-width) + 48.725%);
         transform: rotate(-20deg);
         box-shadow: -0.5% 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c5:hover {
