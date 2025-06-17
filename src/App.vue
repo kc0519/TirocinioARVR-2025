@@ -1,9 +1,9 @@
 <script setup lang="ts">
-    import HUD from "@/components/ui/HUD.vue";
+    import MainMenu from "@/pages/MainMenu.vue";
 </script>
 
 <template>
-    <HUD />
+    <MainMenu />
 </template>
 
 <style lang="scss">
