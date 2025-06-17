@@ -152,8 +152,6 @@
 
     const getHoverText = (elementName: string) =>
     {
-
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const hoverTexts = {
             inventory: "Inventory",
             weapon1: "Primary Weapon",
@@ -166,7 +164,8 @@
             ability2: "Ability 2",
             ability3: "Ability 3"
         };
-        return /* hoverTexts[elementName] || */ elementName;
+
+        return hoverTexts[elementName as keyof typeof hoverTexts];
     };
 </script>
 

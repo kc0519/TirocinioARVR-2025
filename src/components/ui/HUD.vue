@@ -1,4 +1,3 @@
-<!-- eslint-disable no-multiple-empty-lines -->
 <script setup lang="ts">
     import { ref } from "vue";
     import PlayerWheel from "@/components/ui/HUD/playerWheel/playerWheel.vue";
@@ -79,8 +78,6 @@
     }
 </script>
 
-<!-- eslint-disable vue/v-on-event-hyphenation -->
-
 <template>
     <PlayerWheel />
     <PCard :character="character"
@@ -88,7 +85,7 @@
            :player-stats="playerStats"
            :abilities="abilities"
            :inventory-items="inventoryItems"
-           @inventoryClick="showInventory" />
+           @inventory-click="showInventory" />
 
     <!-- Wrap InventoryOverlay with Transition component -->
     <Transition name="inventory">
