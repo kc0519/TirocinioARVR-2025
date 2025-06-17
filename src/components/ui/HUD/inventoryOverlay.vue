@@ -55,7 +55,7 @@
         top: 0;
         left: calc(50% - var(--card-width) / 2);
         box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c1:hover {
@@ -67,7 +67,7 @@
         right: calc(-1.2 * var(--card-width) + 49%);
         transform: rotate(10deg);
         box-shadow: 0.5% 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c2:hover {
@@ -79,7 +79,7 @@
         right: calc(-1.909 * var(--card-width) + 48.725%);
         transform: rotate(20deg);
         box-shadow: 0.5% 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c3:hover {
@@ -91,7 +91,7 @@
         left: calc(-1.2 * var(--card-width) + 49%);
         transform: rotate(-10deg);
         box-shadow: -0.5% 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c4:hover {
@@ -103,7 +103,7 @@
         left: calc(-1.909 * var(--card-width) + 48.725%);
         transform: rotate(-20deg);
         box-shadow: -0.5% 0.5% 1% rgba(0, 0, 0, 0.5);
-        background-image: url('./card_frame_vintage.png');
+        background-image: url('./img/card_frame_vintage.png');
     }
 
     .c5:hover {

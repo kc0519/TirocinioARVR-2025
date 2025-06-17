@@ -274,6 +274,7 @@
       display: none;
       pointer-events: auto; // Permetti interazione
       filter: drop-shadow(0 0 1vw rgba(0,0,0,0.5));
+      z-index: 5;
     }
     .wheel svg {
       width: 100%;
