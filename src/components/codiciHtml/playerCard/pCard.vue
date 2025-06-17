@@ -183,6 +183,7 @@
     right: 0;
     position: absolute;
     background-position: center;
+    z-index: 1;
 }
 
 .hover-tooltip {

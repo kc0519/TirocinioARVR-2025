@@ -19,6 +19,7 @@
   position: absolute;
   top: 1%;
   left: 1%;
+  z-index: 1;
   width: calc((var(--circle-width) * var(--wheel-proportion)) + var(--circle-width));
   aspect-ratio: 1 / 1;
   padding-top: calc(var(--circle-width) * var(--wheel-proportion) / 2);

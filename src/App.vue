@@ -132,7 +132,7 @@
         z-index: 0;
     }
     .map {
-        position: fixed;
+        position: absolute;
         bottom: 1%;
         left: 1%;
     }
