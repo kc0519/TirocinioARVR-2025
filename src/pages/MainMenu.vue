@@ -24,7 +24,8 @@
 
 <template>
     <div class="main-menu">
-        <h1 class="title">
+        <div class="main-menu-container">
+            <h1 class="title">
             BROKEN DAGGERZ
         </h1>
         <div class="buttons-container">
@@ -47,20 +48,36 @@
         <InfoWindow v-if="showInfoOverlay"
                     class="infoWindow"
                     @close="closeInfoOverlay" />
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
     .main-menu {
         position: relative;
+        width: 100vw;
+        height: 100vh;
+        transform: translate(-50%, 0);
+        left: 50%;
+        background-image: url('../../public/img/MenuBackground.png');
+        background-size: cover;
+    }
+
+    .main-menu-container {
         width: 100%;
-        height: 100%;
+        height: 100vh;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        // background-image: url('../../public/img/MenuBackground.png');
-        background-size: cover;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .main-menu-container {
+            width: 1200px;
+            margin: 0 auto;
+        }
     }
 
     .button{

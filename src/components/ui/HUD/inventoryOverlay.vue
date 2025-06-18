@@ -10,10 +10,10 @@
 
 <style lang="scss" scoped>
     .cards-container {
-        --card-width: 23%;
+        --card-width: 20%;
         position: fixed;
-        bottom: -8.5%;
-        left: 44%;
+        bottom: -11.5%;
+        left: 44.3%;
         transform: translateX(-50%);
         width: 38%;
         z-index: 1000;
