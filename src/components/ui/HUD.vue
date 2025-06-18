@@ -102,7 +102,7 @@
                      class="gameMenuButtons"
                      @close="gameMenuButtons = false" />
     <GameButtons class="buttonMenu" @click="toggleMenu">
-        <span class="material-symbols-outlined">menu</span>
+        <span class="material-symbols-outlined addB">menu</span>
     </GameButtons>
     <GameButtons class="buttonZombie" @click="openZombieOverlay">
         <img src="../../../public/icons/ZombieIcon.png"
@@ -229,6 +229,13 @@
     .inventory-leave-from {
         transform: translateX(-50%) translateY(0);
         opacity: 1;
+    }
+    .addB{
+    width: 100%;
+    aspect-ratio: 1;
+    text-align: center;
+    align-content: center;
+    font-size: 184%;
     }
 </style>
 

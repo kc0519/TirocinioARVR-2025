@@ -1,10 +1,13 @@
+<script lang="ts" setup>
+    defineEmits(["click"]);
+</script>
 <template>
-    <button class="button">
+    <button class="game-button" @click="$emit('click')">
         <slot> </slot>
     </button>
 </template>
 <style lang="scss" scoped>
-    .button{
+    .game-button{
         width: 4%;
         aspect-ratio: 1;
         height: auto;

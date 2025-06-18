@@ -1,9 +1,12 @@
 <script setup lang="ts">
-    import MainMenu from "@/pages/MainMenu.vue";
 </script>
 
 <template>
-    <MainMenu />
+    <RouterView v-slot="context">
+        <Transition name="page" mode="out-in">
+            <Component :is="context.Component" :key="context.route.path" />
+        </Transition>
+    </RouterView>
 </template>
 
 <style lang="scss">
