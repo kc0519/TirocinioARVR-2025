@@ -26,28 +26,28 @@
     <div class="main-menu">
         <div class="main-menu-container">
             <h1 class="title">
-            BROKEN DAGGERZ
-        </h1>
-        <div class="buttons-container">
-            <GameButtons class="start-game-button button" @click="goToGamePage">
-                Nuova Partita
+                BROKEN DAGGERZ
+            </h1>
+            <div class="buttons-container">
+                <GameButtons class="start-game-button button" @click="goToGamePage">
+                    Nuova Partita
+                </GameButtons>
+                <GameButtons class="start-tutorial-button button">
+                    Tutorial
+                </GameButtons>
+            </div>
+            <GameLobby />
+            <GameButtons class="settings-button">
+                <span class="material-symbols-outlined addB">settings</span>
             </GameButtons>
-            <GameButtons class="start-tutorial-button button">
-                Tutorial
+            <GameButtons class="help-button">
+                <span class="material-symbols-outlined addB"
+                      @click="openInfoOverlay()">help</span>
             </GameButtons>
-        </div>
-        <GameLobby />
-        <GameButtons class="settings-button">
-            <span class="material-symbols-outlined addB">settings</span>
-        </GameButtons>
-        <GameButtons class="help-button">
-            <span class="material-symbols-outlined addB"
-                  @click="openInfoOverlay()">help</span>
-        </GameButtons>
-        <div v-if="showInfoOverlay" class="info-overlay-blocker"></div>
-        <InfoWindow v-if="showInfoOverlay"
-                    class="infoWindow"
-                    @close="closeInfoOverlay" />
+            <div v-if="showInfoOverlay" class="info-overlay-blocker"></div>
+            <InfoWindow v-if="showInfoOverlay"
+                        class="infoWindow"
+                        @close="closeInfoOverlay" />
         </div>
     </div>
 </template>
