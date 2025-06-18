@@ -1,12 +1,23 @@
 <script setup lang="ts">
     import GameButtons from "@/components/ui/HUD/GameButtons.vue";
     import GameLobby from "@/components/ui/gameLobby.vue";
+    import InfoWindow from "@/components/ui/HUD/InfoWindow.vue";
     import { useRouter } from "vue-router";
+    import { ref } from "vue";
 
+    const showInfoOverlay = ref(false);
     const router = useRouter();
     function goToGamePage()
     {
         router.push({ name: "game" });
+    }
+    function openInfoOverlay()
+    {
+        showInfoOverlay.value = true;
+    }
+    function closeInfoOverlay()
+    {
+        showInfoOverlay.value = false;
     }
 
 </script>
@@ -29,8 +40,13 @@
             <span class="material-symbols-outlined addB">settings</span>
         </GameButtons>
         <GameButtons class="help-button">
-            <span class="material-symbols-outlined addB">help</span>
+            <span class="material-symbols-outlined addB"
+                  @click="openInfoOverlay()">help</span>
         </GameButtons>
+        <div v-if="showInfoOverlay" class="info-overlay-blocker"></div>
+        <InfoWindow v-if="showInfoOverlay"
+                    class="infoWindow"
+                    @close="closeInfoOverlay" />
     </div>
 </template>
 
@@ -91,11 +107,33 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     .addB{
-    width: 100%;
-    aspect-ratio: 1;
-    text-align: center;
-    align-content: center;
-    font-size: 184%;
-}
+        width: 100%;
+        aspect-ratio: 1;
+        text-align: center;
+        align-content: center;
+        font-size: 184%;
+    }
+    .infoWindow {
+        pointer-events: auto;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .info-overlay-blocker {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 50;
+        background: rgba(0,0,0,0.2);
+        pointer-events: auto;
+    }
 
 </style>

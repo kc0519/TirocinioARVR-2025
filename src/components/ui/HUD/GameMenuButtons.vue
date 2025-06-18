@@ -1,10 +1,16 @@
 <script setup lang="ts">
     import { defineEmits } from "vue";
+    import { useRouter } from "vue-router";
     const emit = defineEmits(["close"]);
     const closeMenu = () =>
     {
         emit("close");
     };
+    const router = useRouter();
+    function goToMenuPage()
+    {
+        router.push({ name: "main" });
+    }
 </script>
 <template>
     <div class="menu">
@@ -17,7 +23,7 @@
         <button class="button" @click="console.log('Lingua')">
             Lingua
         </button>
-        <button class="button" @click="console.log('Torna al menù')">
+        <button class="button" @click="goToMenuPage">
             Torna al menù
         </button>
     </div>

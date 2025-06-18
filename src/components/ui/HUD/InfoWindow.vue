@@ -10,31 +10,33 @@
     <div class="zombie-overlay">
         <div class="zombie-window">
             <div class="overlay-content">
-                <h3>Sezione 1: Introduzione</h3>
-                <p>
-                    Questo è un esempio di overlay scrollabile. Puoi inserire qui tutte le
-                    informazioni che vuoi mostrare agli utenti.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <h3>Sezione 2: Dettagli</h3>
-                <p>
-                    Altre informazioni dettagliate, testo lungo per testare lo scroll.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque euismod, nisi eu consectetur.
-                </p>
-                <p>
-                    Ancora altro testo per riempire e vedere lo scroll.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque euismod, nisi eu consectetur.
-                </p>
-                <h3>Sezione 3: Conclusioni</h3>
-                <p>
-                    Testo finale. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque euismod, nisi eu consectetur.
-                </p>
+                <slot>
+                    <h3>Sezione 1: Introduzione</h3>
+                    <p>
+                        Questo è un esempio di overlay scrollabile. Puoi inserire qui tutte le
+                        informazioni che vuoi mostrare agli utenti.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <h3>Sezione 2: Dettagli</h3>
+                    <p>
+                        Altre informazioni dettagliate, testo lungo per testare lo scroll.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque euismod, nisi eu consectetur.
+                    </p>
+                    <p>
+                        Ancora altro testo per riempire e vedere lo scroll.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque euismod, nisi eu consectetur.
+                    </p>
+                    <h3>Sezione 3: Conclusioni</h3>
+                    <p>
+                        Testo finale. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque euismod, nisi eu consectetur.
+                    </p>
+                </slot>
             </div>
             <button class="button-close" @click="closeOverlay">
                 Chiudi

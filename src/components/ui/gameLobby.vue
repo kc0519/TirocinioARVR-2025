@@ -25,7 +25,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-    height: 100vh;
+  height: 100vh;
 }
 
 .addB{
@@ -40,7 +40,7 @@ input {
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 1000; // Ensure the input is above other elements
+  z-index: 10; // Ensure the input is above other elements
 }
 
 .user-icon, .add {

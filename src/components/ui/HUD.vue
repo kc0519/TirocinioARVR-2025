@@ -7,7 +7,7 @@
     import ActionWheel from "@/components/ui/HUD/ActionWheel.vue";
     import GameMenuButtons from "@/components/ui/HUD/GameMenuButtons.vue";
     import GameButtons from "@/components/ui/HUD/GameButtons.vue";
-    import ZombieWindow from "@/components/ui/HUD/ZombieWindow.vue";
+    import InfoWindow from "@/components/ui/HUD/InfoWindow.vue";
 
     // Dummy data for required props
     import type { Character, Weapons, PlayerStats, Ability } from "../../types.ts";
@@ -109,9 +109,9 @@
              alt="Zombie"
              class="zombie-icon" />
     </GameButtons>
-    <ZombieWindow v-if="showZombieOverlay"
-                  class="zombieWindow"
-                  @close="closeZombieOverlay" />
+    <InfoWindow v-if="showZombieOverlay"
+                class="zombieWindow"
+                @close="closeZombieOverlay" />
 </template>
 
 <style lang="scss" scoped>
