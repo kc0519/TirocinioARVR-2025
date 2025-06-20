@@ -1,16 +1,16 @@
 <script setup lang="ts">
     import { defineEmits } from "vue";
-    import { useRouter } from "vue-router";
+    // import { useRouter } from "vue-router";
     const emit = defineEmits(["close"]);
     const closeMenu = () =>
     {
         emit("close");
     };
-    const router = useRouter();
-    function goToMenuPage()
-    {
-        router.push({ name: "main" });
-    }
+    // const router = useRouter();
+    // function goToMenuPage()
+    // {
+    //     router.push({ name: "main" });
+    // }
 </script>
 <template>
     <div class="menu">
@@ -24,9 +24,12 @@
             <button class="button" @click="console.log('Lingua')">
                 Lingua
             </button>
-            <button class="button" @click="goToMenuPage">
-                Torna al menù
-            </button>
+            <form action="..">
+                <button class="button"
+                        type="submit">
+                    Torna al menù
+                </button>
+            </form>
         </slot>
     </div>
 </template>
@@ -41,7 +44,7 @@
             .button{
                 background-color:antiquewhite;
                 width: 20vw;
-                height: 10vw;
+                height: 5vw;
                 padding: 12px 20px;
                 border: none;
                 border-radius: 6px;
@@ -51,7 +54,6 @@
                 font-size: 16px;
                 font-weight: 500;
                 text-align: center;
-                /* transition: all 0.3s ease; */
                 box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.5);
             }
 
