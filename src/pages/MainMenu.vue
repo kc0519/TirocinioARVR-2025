@@ -2,10 +2,12 @@
     import GameButtons from "@/components/ui/HUD/GameButtons.vue";
     import GameLobby from "@/components/ui/gameLobby.vue";
     import InfoWindow from "@/components/ui/HUD/InfoWindow.vue";
+    import GameMenuButtons from "@/components/ui/HUD/GameMenuButtons.vue";
     import { useRouter } from "vue-router";
     import { ref } from "vue";
 
     const showInfoOverlay = ref(false);
+    const showMenu = ref(false);
     const router = useRouter();
     function goToGamePage()
     {
@@ -37,17 +39,30 @@
                 </GameButtons>
             </div>
             <GameLobby />
-            <GameButtons class="settings-button">
+            <GameButtons class="settings-button" @click="showMenu = true">
                 <span class="material-symbols-outlined addB">settings</span>
             </GameButtons>
             <GameButtons class="help-button">
                 <span class="material-symbols-outlined addB"
                       @click="openInfoOverlay()">help</span>
             </GameButtons>
-            <div v-if="showInfoOverlay" class="info-overlay-blocker"></div>
+            <div v-if="showInfoOverlay || showMenu" class="info-overlay-blocker"></div>
             <InfoWindow v-if="showInfoOverlay"
                         class="infoWindow"
                         @close="closeInfoOverlay" />
+            <GameMenuButtons v-if="showMenu"
+                             class="gameMenuButtons"
+                             @close="showMenu = false">
+                <button class="button-menu" @click="console.log('Generali')">
+                    Generali
+                </button>
+                <button class="button-menu" @click="console.log('Crediti')">
+                    Crediti
+                </button>
+                <button class="button-menu" @click="showMenu = false">
+                    Chiudi
+                </button>
+            </GameMenuButtons>
         </div>
     </div>
 </template>
@@ -152,5 +167,44 @@
         background: rgba(0,0,0,0.2);
         pointer-events: auto;
     }
+    .gameMenuButtons {
+        pointer-events: auto;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 6000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .button-menu{
+                background-color:antiquewhite;
+                width: 20vw;
+                height: 10vw;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 6px;
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                /* transition: all 0.3s ease; */
+                box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.5);
+            }
+
+            .button-menu:hover {
+            background-color: darken(antiquewhite, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+
+            .button-menu:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
 
 </style>

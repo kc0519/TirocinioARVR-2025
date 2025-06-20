@@ -14,18 +14,20 @@
 </script>
 <template>
     <div class="menu">
-        <button class="button" @click="closeMenu">
-            Riprendi
-        </button>
-        <button class="button" @click="console.log('Audio')">
-            Audio
-        </button>
-        <button class="button" @click="console.log('Lingua')">
-            Lingua
-        </button>
-        <button class="button" @click="goToMenuPage">
-            Torna al menù
-        </button>
+        <slot>
+            <button class="button" @click="closeMenu">
+                Riprendi
+            </button>
+            <button class="button" @click="console.log('Audio')">
+                Audio
+            </button>
+            <button class="button" @click="console.log('Lingua')">
+                Lingua
+            </button>
+            <button class="button" @click="goToMenuPage">
+                Torna al menù
+            </button>
+        </slot>
     </div>
 </template>
 <style lang="scss" scoped>
